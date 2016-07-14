@@ -48,7 +48,7 @@ function loadData() {
         
     })
     .error(function () {
-        var defaultAnswer = "<h3>New York Times Articles could Not Be Loaded.";
+        var defaultAnswer = "<h3>New York Times Articles Could Not Be Loaded.";
         $nytElem.html(defaultAnswer);
     });
     
