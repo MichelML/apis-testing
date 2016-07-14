@@ -33,7 +33,7 @@ function loadData() {
         var articles = data.response.docs,
             articlesHTML = "",
             count = 1;
-        if (articles.length === 0) articlesHTML += "<h3>We are sorry. There was no article related to your query.</h3>";
+        if (articles.length === 0) articlesHTML += "<h3>Oh no! There was no article related to your query.</h3>";
         else {
         $.each(articles, function(key, article) {
             if (article.lead_paragraph === null) article.lead_paragraph = "Click here to read the article";
