@@ -25,7 +25,7 @@ function loadData() {
     var url = "https://api.nytimes.com/svc/search/v2/articlesearch.json";
     url += '?' + $.param({
           'api-key': "587c93bf09b14a70b069b5352a646e29",
-          'q': "trois-rivieres",
+          'q': cityStr,
           'sort': "newest",
           'page': 0
     });
