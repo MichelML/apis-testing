@@ -52,13 +52,15 @@ ul {
 
 /*Thanks to http://mrmrs.io/links for the following links styling*/
 a {
+  transition: font-size .4s;
+  font-size:1.02em;
   transition: color .4s;
   color: #265C83;
 }
 
 a:link,
 a:visited { color: #265C83; }
-a:hover   { color: #000;font-size:1.05em; }
+a:hover   { color: #000; }
 a:active  {
   transition: color .3s;
   color: #007BE6;
