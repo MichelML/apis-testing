@@ -22,7 +22,25 @@ function loadData() {
     console.log(srcStr);
     $bgimg.attr("src", srcStr);
     // Load NYT articles
-    // 
+    var url = "https://api.nytimes.com/svc/search/v2/articlesearch.json";
+    url += '?' + $.param({
+          'api-key': "587c93bf09b14a70b069b5352a646e29",
+          'q': "trois-rivieres",
+          'sort': "newest",
+          'page': 0
+    });
+    $.getJSON(url,function(data) {
+        var articles = data.response.docs,
+            articlesHTML = "",
+            count = 1;
+        $.each(articles, function(key,article) {
+            articlesHTML+="<a href='" + article.web_url+"'><li class='nyt-article' id='article'"+count+">" + 
+                          "<h3 class='nyt-title'>" + article.headline.main + "<small> - " + article.pub_date.substr(0,10)  + "</small></h3>" + 
+                          "<p class='nyt-abstract'>" + article.absract+ "</p></li></a>"; 
+            count++;
+        });
+        $nytElem.html(articlesHTML);
+    });
     // YOUR CODE GOES HERE!
 
     return false;
