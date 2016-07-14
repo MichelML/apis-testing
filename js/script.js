@@ -23,7 +23,7 @@ function loadData() {
     // Load NYT articles
     var url = "https://api.nytimes.com/svc/search/v2/articlesearch.json";
     url += '?' + $.param({
-        'api-key': "587c93bf09b14a70b069b5352a646e29deletethis",
+        'api-key': "587c93bf09b14a70b069b5352a646e29",
         'q': cityStr,
         'sort': "newest",
         'page': 0
