@@ -16,7 +16,8 @@ function loadData() {
     // load streetview
     var streetStr = ($street.val() !== "") ? $street.val().replace(/\s/g,"-") + ',' : "";
     var cityStr = ($city.val() !== "") ? $city.val().replace(/\s/g, "-") : "";
-    var srcStr = (streetStr+cityStr) ? "https://maps.googleapis.com/maps/api/streetview?size=600x300&location="+streetStr+cityStr 
+    var apiKey = "&key=AIzaSyD9meXfYM0jaOy28AC87HT0p8SR5f8RTjg";
+    var srcStr = (streetStr+cityStr) ? "https://maps.googleapis.com/maps/api/streetview?size=600x300&location="+streetStr+cityStr+apiKey
                                         : $bgimg.attr("src");
     console.log(srcStr);
     $bgimg.attr("src", srcStr);
