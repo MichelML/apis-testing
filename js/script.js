@@ -53,7 +53,7 @@ function loadData() {
     });
     
     //Getting Articles from wikipedia
-    function logResults(data) {
+    function logResults(json) {
         console.log(json);
     }
 
@@ -61,7 +61,7 @@ function loadData() {
         url: "https://en.wikipedia.org/w/api.php?action=query&prop=revisions&rvprop=content&titles="+cityStr.replace(/-/g,"%20"),
         dataType: 'jsonp',
         headers: { 'Api-User-Agent': 'Example/1.0' },
-        success:"logResults" 
+        jsonpCallback:"logResults" 
     } );
 
 
