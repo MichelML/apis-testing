@@ -35,6 +35,7 @@ function loadData() {
             articlesHTML = "",
             count = 1;
         $.each(articles, function(key,article) {
+            if (article.lead_paragraphh === null) article.lead_paragraph = "Click here to read the article";
             articlesHTML+="<a href='" + article.web_url+"' target='_blank'><li class='nyt-article' id='article'"+count+">" + 
                           "<h3 class='nyt-title'>" + article.headline.main + "<small> - " + article.pub_date.substr(0,10)  + "</small></h3>" + 
                           "<p class='nyt-lead-paragraph'>" + article.lead_paragraph+ "</p></li></a>"; 
