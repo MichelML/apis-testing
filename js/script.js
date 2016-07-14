@@ -37,7 +37,7 @@ function loadData() {
         $.each(articles, function(key,article) {
             articlesHTML+="<a href='" + article.web_url+"'><li class='nyt-article' id='article'"+count+">" + 
                           "<h3 class='nyt-title'>" + article.headline.main + "<small> - " + article.pub_date.substr(0,10)  + "</small></h3>" + 
-                          "<p class='nyt-abstract'>" + article.abstract+ "</p></li></a>"; 
+                          "<p class='nyt-lead-paragraph'>" + article.lead_paragraph+ "</p></li></a>"; 
             count++;
         });
         $nytElem.html(articlesHTML);
