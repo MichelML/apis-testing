@@ -101,3 +101,9 @@ a
 {
     text-decoration: none;
 }
+
+#nyt-zero-article,
+#nyt-error 
+{
+    color:#900;    
+}
