@@ -29,6 +29,7 @@ function loadData() {
           'sort': "newest",
           'page': 0
     });
+    console.log(url);
     $.getJSON(url,function(data) {
         var articles = data.response.docs,
             articlesHTML = "",
