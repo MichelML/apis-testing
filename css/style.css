@@ -1,68 +1,103 @@
-* {box-sizing:border-box;}
-body {background-color: #CCC;}
-
-ul {
-    list-style-type:none;
+*
+{
+    box-sizing: border-box;
+}
+body
+{
+    background-color: #ccc;
 }
 
-.bgimg {
-    position:fixed;
+ul
+{
+    list-style-type: none;
+}
+
+.bgimg
+{
+    position: fixed;
+    z-index: -1;
     top: 0;
     left: 0;
-    min-width:100%;
-    min-height:100%;
-    z-index:-1;
-    opacity:1;
+
+    min-width: 100%;
+    min-height: 100%;
+
+    opacity: 1;
 }
 
-.greeting {
-    color:black;
-    text-shadow: 1px 1px 3px rgba(255,255,255, .5);
+.greeting
+{
     text-align: center;
+
+    color: black;
+    text-shadow: 1px 1px 3px rgba(255,255,255, .5);
 }
 
-.wikipedia-container {
-    float:right;
-    width:290px;
-    padding:10px;
+.wikipedia-container
+{
+    float: right;
+
+    width: 290px;
     margin-right: 10px;
-    background-color: rgba(255,255,255,0.7);
-}
-
-.nytimes-container {
     padding: 10px;
-    margin-right:300px;
-    background-color: rgba(255,255,255,0.7);
+
+    background-color: rgba(255,255,255,.7);
 }
 
-.article-list {
+.nytimes-container
+{
+    margin-right: 300px;
+    padding: 10px;
+
+    background-color: rgba(255,255,255,.7);
+}
+
+.article-list
+{
     margin: 0;
     padding: 0;
 }
 
-.article {
-    list-style-type: none;
-    padding:10px;
-    border-top: 1px solid #CCC;
-}
-.article:first-child {
-    border-top:none;
+.article
+{
+    padding: 10px;
 
+    list-style-type: none;
+
+    border-top: 1px solid #ccc;
+}
+.article:first-child
+{
+    border-top: none;
 }
 
 /*Thanks to http://mrmrs.io/links for the following links styling*/
-a {
-  transition: font-size .4s;
-  transition: color .4s;
-  color: #265C83;
+a
+{
+    transition: color .4s;
+
+    color: #265c83;
 }
 
 a:link,
-a:visited { color: #265C83; }
-a:hover   { color: #000;font-size:1.02em; }
-a:active  {
-  transition: color .3s;
-  color: #007BE6;
+a:visited
+{
+    color: #265c83;
+}
+a:hover
+{
+    font-size: 1.02em; 
+
+    color: #000;
+}
+a:active
+{
+    transition: color .3s;
+
+    color: #007be6;
 }
 
- a { text-decoration: none; }
+a
+{
+    text-decoration: none;
+}
