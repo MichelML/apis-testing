@@ -60,7 +60,7 @@ function loadData() {
     $.ajax( {
         url: "https://en.wikipedia.org/w/api.php?action=query&prop=revisions&rvprop=content&titles="+cityStr.replace(/-/g,"%20"),
         dataType: 'jsonp',
-        headers: { 'Api-User-Agent': 'Example/1.0' },
+        headers: { 'Api-User-Agent': 'michel.moreau.lapointe@gmail.com' },
         jsonpCallback:"logResults" 
     } );
 
