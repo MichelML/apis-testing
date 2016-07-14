@@ -53,7 +53,7 @@ function loadData() {
     });
     
     //Getting Articles from wikipedia
-    $.getJSON("http://en.wikipedia.org/w/api.php?action=query&prop=revisions&rvprop=content&titles="+cityStr.replace(/\-/g,"%s")+"&format=json&callback=?", function(data) {
+    $.getJSON("https://en.wikipedia.org/w/api.php?action=query&prop=revisions&rvprop=content&titles="+cityStr.replace(/\-/g,"%20")+"&callback=?", function(data) {
     console.log(data);
 });
 
