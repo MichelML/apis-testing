@@ -56,7 +56,7 @@ a {
 
 a:link,
 a:visited { color: #265C83; }
-a:hover   { color: #000;font-size:2em; }
+a:hover   { color: #000;font-size:1.2em; }
 a:active  {
   transition: color .3s;
   color: #007BE6;
