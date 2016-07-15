@@ -63,6 +63,7 @@ function loadData() {
         dataType: 'jsonp',
         success:function (response) {
             console.log(wikiUrl);
+            console.log(response);
             var articleList = response[1];
 
             for (var i = 0; i < articleList.length; i++) {
