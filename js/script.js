@@ -58,12 +58,18 @@ function loadData() {
     }
 
     $.ajax( {
-        url: "https://en.wikipedia.org/w/api.php?action=query&prop=revisions&rvprop=content&titles="+cityStr.replace(/-/g,"%20"),
+        url: "https://en.wikipedia.org/w/api.php?action=opensearch&prop=revisions&rvprop=content&titles="+cityStr.replace(/-/g,"%20"),
         dataType: 'jsonp',
-        headers: { 'Api-User-Agent': 'michel.moreau.lapointe@gmail.com' },
-        jsonpCallback:"logResults" 
-    } );
+        success:function (response) {
+            var articleList = response[1];
 
+            for (var i = 0; i < articleList.length; i++) {
+                articleStr = articleList[i];
+                var url = 'https://en.wikipedia.org/wiki/' + articleStr;
+                $wikiElem.append('<li><a href="' + url + '">' + articleStr + '</a></li>');
+            }
+        } 
+    } );
 
     return false;
 }
