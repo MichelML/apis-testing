@@ -67,8 +67,6 @@ function loadData() {
         url: wikiUrl,
         dataType: 'jsonp',
         success:function (response) {
-            console.log(wikiUrl);
-            console.log(response);
             var articleList = response[1];
             var articlePreviews = response[2];
             for (var i = 0; i < articleList.length; i++) {
@@ -77,6 +75,7 @@ function loadData() {
                 var url = 'https://en.wikipedia.org/wiki/' + articleStr;
                 $wikiElem.append('<a href="' + url + '" target="_blank"><li><h4>' + articleStr + '</h4><p>'+ articlePreview.substr(0,75)+'[...]</p></li></a>');
             }
+            clearTimeout(wikiRequestTimeout);
         } 
     } );
 
