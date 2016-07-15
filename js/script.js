@@ -70,7 +70,7 @@ function loadData() {
                 var articleStr = articleList[i];
                 var articlePreview = articlePreviews[i];
                 var url = 'https://en.wikipedia.org/wiki/' + articleStr;
-                $wikiElem.append('<a href="' + url + '" target="_blank"><li><h4>' + articleStr + '</h4><p>'+ articlePreview.substr(0,50)+'[...]</p></li></a>');
+                $wikiElem.append('<a href="' + url + '" target="_blank"><li><h4>' + articleStr + '</h4><p>'+ articlePreview.substr(0,75)+'[...]</p></li></a>');
             }
         } 
     } );
