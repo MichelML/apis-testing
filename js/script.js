@@ -56,11 +56,13 @@ function loadData() {
     function logResults(json) {
         console.log(json);
     }
-
+    
+    var wikiUrl = "https://en.wikipedia.org/w/api.php?action=opensearch&prop=revisions&rvprop=content&titles="+cityStr.replace(/-/g,"%20");
     $.ajax( {
-        url: "https://en.wikipedia.org/w/api.php?action=opensearch&prop=revisions&rvprop=content&titles="+cityStr.replace(/-/g,"%20"),
+        url: wikiUrl,
         dataType: 'jsonp',
         success:function (response) {
+            console.log(wikiUrl);
             var articleList = response[1];
 
             for (var i = 0; i < articleList.length; i++) {
