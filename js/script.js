@@ -57,7 +57,7 @@ function loadData() {
         console.log(json);
     }
     
-    var wikiUrl = "https://en.wikipedia.org/w/api.php?action=opensearch&search="+cityStr.replace(/-/g,"%20")+"format=json&callback=wikiCallback";
+    var wikiUrl = "https://en.wikipedia.org/w/api.php?action=opensearch&search="+cityStr.replace(/-/g,"%20")+"&format=json&callback=wikiCallback";
     $.ajax( {
         url: wikiUrl,
         dataType: 'jsonp',
