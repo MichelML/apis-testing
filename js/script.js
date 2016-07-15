@@ -65,11 +65,12 @@ function loadData() {
             console.log(wikiUrl);
             console.log(response);
             var articleList = response[1];
-
+            var articlePreviews = response[2];
             for (var i = 0; i < articleList.length; i++) {
-                articleStr = articleList[i];
+                var articleStr = articleList[i];
+                var articlePreview = articlePreviews[i];
                 var url = 'https://en.wikipedia.org/wiki/' + articleStr;
-                $wikiElem.append('<a href="' + url + '"><li><h4>' + articleStr + '</h4></li></a>');
+                $wikiElem.append('<a href="' + url + '" target="_blank"><li><h4>' + articleStr + '</h4><p>'+ articlePreview.substr(0,100)' [...]</p></li></a>');
             }
         } 
     } );
